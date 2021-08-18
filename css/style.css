@@ -1,0 +1,162 @@
+/* Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Resetando */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Inicio do desenvolvimento */
+div#container {
+  background: url("../images/pattern-background-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+
+  width: 450px;
+}
+
+div#content div#image {
+  background: url("../images/illustration-hero.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div#content div#texts {
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 3px 3px 3px #ddd;
+
+  padding: 50px;
+}
+
+div#content div#texts h1 {
+  color: hsl(223, 47%, 23%);
+  font-size: 2em;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+div#content div#texts > p {
+  color: hsl(224, 23%, 55%);
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+div#content div#texts div#plan {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+div#content div#texts div#plan > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div#content div#texts div#plan > div img {
+  margin-right: 10px;
+}
+
+div#content div#texts div#plan > div h3 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 700;
+}
+
+div#content div#texts div#plan > div p {
+  color: hsl(224, 23%, 55%);
+}
+
+div#content div#texts div#plan a {
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+  transition: .2s;
+}
+
+div#content div#texts div#plan a:hover {
+  color: hsl(245, 61%, 59%);
+}
+
+div.button {
+  background-color: hsl(245, 75%, 52%);
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px hsl(224, 23%, 55%);
+  text-align: center;
+  padding: 10px;
+  margin: 30px 0;
+  transition: .2s;
+}
+
+div.button:hover {
+  background-color: hsl(245, 61%, 59%);
+}
+
+div.button a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+div.button-second {
+  padding: 10px;
+  text-align: center;
+}
+
+div.button-second a {
+  color: hsl(224, 23%, 55%);
+  font-weight: 900;
+  text-decoration: none;
+  transition: .2s;
+}
+
+div.button-second a:hover {
+  color: hsl(223, 47%, 23%); 
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 500px) {
+  div#container {
+    background: url("../images/pattern-background-mobile.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  div#content {
+    width: 95%;
+    margin: 40px auto;
+  }
+
+  div#content div#texts {  
+    padding: 20px;
+  }
+}
